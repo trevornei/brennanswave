@@ -1,26 +1,43 @@
+"use client";
+
 import Image from "next/image";
+import { useState, useRef, useEffect } from "react";
 
 export default function Home() {
+  const [videoError, setVideoError] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
   return (
     <>
-
-      {/* Main Content */}
-      <div className="font-sans flex flex-col items-center justify-center min-h-screen">
-        <main className="flex flex-col justify-center items-center">
-
       {/* Background Video */}
       <div className="fixed -z-10 inset-0 w-full h-full overflow-hidden">
-        <video 
-          className="w-full h-full object-cover" 
-          autoPlay 
-          loop 
-          muted
-        >
-          <source src="/video/brennanswave.mp4" type="video/mp4" />
-        </video>
+        {!videoError ? (
+          <video 
+            ref={videoRef}
+            className="w-full h-full object-cover" 
+            autoPlay 
+            loop 
+            muted
+            playsInline
+            preload="metadata"
+            onError={() => {
+              console.error('Video failed to load');
+              setVideoError(true);
+            }}
+            onLoadStart={() => console.log('Video loading started')}
+            onCanPlay={() => console.log('Video can play')}
+          >
+            <source src="/video/brennanswave.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          {/* Fallback background when video fails */}
+        )}
       </div>
 
-        <div className="flex flex-col justify-center items-center p-8 backdrop-blur-[5px] bg-white/10 rounded-lg">
+      {/* Main Content */}
+      <div className="font-sans flex flex-col items-center justify-center min-h-screen relative z-10">
+        <main className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center p-8 backdrop-blur-[5px] bg-white/10 rounded-lg">
             <Image
               className="mb-4"
               src="/next.svg"
