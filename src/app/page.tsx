@@ -1,30 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useRef, useEffect } from "react";
 
 export default function Home() {
   return (
     <>
-      {/* Background Video */}
-      <div className="fixed -z-10 inset-0 w-full h-full overflow-hidden">
-          <video 
-            className="w-full h-full object-cover" 
-            autoPlay 
-            loop 
-            muted
-            playsInline
-            preload="metadata"
-          >
-            <source src="/video/brennanswave.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-      </div>
-
       {/* Main Content */}
       <div className="font-sans flex flex-col items-center justify-center min-h-screen relative z-10">
         <main className="flex flex-col justify-center items-center">
-          <div className="flex flex-col justify-center items-center p-8 backdrop-blur-[5px] bg-white/10 rounded-lg">
+
+      <div className="fixed -z-10 inset-0 w-full h-full overflow-hidden">
+          <Image
+            className="w-full h-full object-cover"
+            src="/gif/brennanswave.gif"
+            alt=""
+            width={800}
+            height={800}
+            priority
+          />
+      </div>
+
+        <div className="flex flex-col justify-center items-start -rotate-10 border-2 border-teal-500 p-8 backdrop-blur-[5px] bg-white/10 rounded-lg">
             <Image
               className="mb-4"
               src="/next.svg"
@@ -34,11 +30,11 @@ export default function Home() {
               priority
             />
             
-            <h1 className="text-xl font-extrabold md:text-2xl lg:text-3xl rotate-2 xl:text-4xl text-black/80 text-center mb-2">
+            <h1 className="text-xl font-extrabold md:text-2xl lg:text-3xl xl:text-4xl text-black/80 text-center mb-2">
               Brennanswave.com
             </h1>
             
-            <h3 className="text-xl font-extrabold underline decoration-wavy rotate-1 decoration-pink-500 md:text-2xl lg:text-3xl xl:text-4xl text-black/80 text-center">
+            <h3 className="text-xl font-extrabold underline decoration-wavy  decoration-pink-500 md:text-2xl lg:text-3xl xl:text-4xl text-black/80 text-center">
               is under construction
             </h3>
           </div>
