@@ -4,34 +4,21 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 
 export default function Home() {
-  const [videoError, setVideoError] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
   return (
     <>
       {/* Background Video */}
       <div className="fixed -z-10 inset-0 w-full h-full overflow-hidden">
-        {!videoError ? (
           <video 
-            ref={videoRef}
             className="w-full h-full object-cover" 
             autoPlay 
             loop 
             muted
             playsInline
             preload="metadata"
-            onError={() => {
-              console.error('Video failed to load');
-              setVideoError(true);
-            }}
-            onLoadStart={() => console.log('Video loading started')}
-            onCanPlay={() => console.log('Video can play')}
           >
             <source src="/video/brennanswave.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-        ) : (
-          {/* Fallback background when video fails */}
-        )}
       </div>
 
       {/* Main Content */}
