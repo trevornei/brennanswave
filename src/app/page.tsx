@@ -3,6 +3,11 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
+
+      {/* Main Content */}
+      <div className="font-sans flex flex-col items-center justify-center min-h-screen">
+        <main className="flex flex-col justify-center items-center">
+
       {/* Background Video */}
       <div className="fixed -z-10 inset-0 w-full h-full overflow-hidden">
         <video 
@@ -15,10 +20,7 @@ export default function Home() {
         </video>
       </div>
 
-      {/* Main Content */}
-      <div className="font-sans flex flex-col items-center justify-center min-h-screen">
-        <main className="flex flex-col justify-center items-center">
-          <div className="flex flex-col justify-center items-center p-8 backdrop-blur-[5px] bg-white/10 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-8 backdrop-blur-[5px] bg-white/10 rounded-lg">
             <Image
               className="mb-4"
               src="/next.svg"
