@@ -12,7 +12,7 @@ export default function Home() {
       <div className="fixed -z-10 inset-0 w-full h-full overflow-hidden">
           <Image
             className="w-full h-full object-cover"
-            src="/gif/brennanswave.gif"
+            src="/gif/brennansGifLow.gif"
             alt=""
             width={800}
             height={800}
