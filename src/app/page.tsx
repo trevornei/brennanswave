@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       {/* Main Content */}
-      <div className="font-sans flex flex-col items-center justify-center min-h-screen relative z-10">
+      <div className="font-sans flex flex-col px-6 items-center justify-center min-h-screen relative z-10">
         <main className="flex flex-col justify-center items-center">
 
       <div className="fixed -z-10 inset-0 w-full h-full overflow-hidden">
@@ -20,22 +20,14 @@ export default function Home() {
           />
       </div>
 
-        <div className="flex flex-col justify-center items-start -rotate-10 border-2 border-teal-500 p-8 backdrop-blur-[5px] bg-white/10 rounded-lg">
-            <Image
-              className="mb-4"
-              src="/next.svg"
-              alt="Next.js logo"
-              width={180}
-              height={38}
-              priority
-            />
+        <div className="flex mt-16 flex-col mx-6 justify-center items-start border-6 border-black/20 p-2 md:p-4 lg:p-8 backdrop-blur-[5px] bg-white/10 rounded-lg">
             
             <h1 className="text-xl font-extrabold md:text-2xl lg:text-3xl xl:text-4xl text-black/80 text-center mb-2">
-              Brennanswave.com
+              Brennans👋.com
             </h1>
             
-            <h3 className="text-xl font-extrabold underline decoration-wavy  decoration-pink-500 md:text-2xl lg:text-3xl xl:text-4xl text-black/80 text-center">
-              is under construction
+            <h3 className="text-xl font-extrabold decoration-pink-500 md:text-2xl lg:text-3xl xl:text-4xl text-black/80 text-center">
+              is under construction🚧
             </h3>
           </div>
         </main>
