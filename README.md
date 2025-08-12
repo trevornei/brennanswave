@@ -1,4 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Welcome to Brennanwave.com 
+
+
+## End Goal 🏄‍♂️:
+- Landing Page: 3D surf report website with a 3D rendered surfer on Brennan's wave. 
+- About Page: Biography on Brennan and a statement on the culture of Brennan's Wave.
+
+Interested in joining?
+- Discord: [Our Discord](link: https://discord.com/channels/1404831679062999040/1404831679062999043)
+
+## ISO Roles:
+- UI/UX Designers
+- Web Devs
+- 3D Animators
+
+
+## FE Stack
+- NEXTJS Framework
+- THREEJS for 3D rendering
+- GSAP for animation
+
 
 ## Getting Started
 
