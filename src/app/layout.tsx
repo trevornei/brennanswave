@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "BrennansWave.com",
-  description: "The official website of Brennans Wave!",
+  description: "The official website of Brennan's Wave!",
 };
 
 export default function RootLayout({
